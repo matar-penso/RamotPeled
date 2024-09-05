@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רמות פלד - סוכנות ביטוח</title>
+    <style>
+        /* הגדרות בסיסיות */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F5F5F5; /* צבע רקע שמנת בהיר */
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: center;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        /* רקע עם תמונות בגוון הלוגו */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/dltwagldg/image/upload/v1725527832/%D7%A8%D7%9E%D7%95%D7%AA_%D7%A4%D7%9C%D7%93_k3jlb7.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        header {
+            background-color: #D7CCC8; /* צבע רקע שמנת כהה */
+            color: #333;
+            padding: 30px 20px;
+            animation: slideDown 1s ease-out;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header img {
+            width: 300px; /* גודל הלוגו רחב יותר */
+            height: auto;
+            margin-top: 20px;
+        }
+
+        section {
+            padding: 40px 20px;
+            color: #4E342E; /* צבע טקסט חום כהה */
+        }
+
+        section:nth-child(2) {
+            background-color: #E0D9D6; /* צבע רקע שמנת בהיר */
+        }
+
+        section:nth-child(3) {
+            background-color: #D7CCC8; /* צבע רקע שמנת כהה */
+        }
+
+        .btn {
+            background-color: #BCAAA4; /* צבע רקע שמנת כהה יותר */
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 1em;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background-color: #D7CCC8; /* צבע רקע שמנת כהה */
+            color: #333;
+            padding: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* הנפשות */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* אפקטים חלקים */
+        h2, h3, p {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards ease-out;
+        }
+
+        h2 {
+            animation-delay: 0.5s;
+        }
+
+        h3, p {
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* אלמנטים דקורטיביים */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(215, 204, 200, 0.2); /* צבע שמנת עם שקיפות */
+            animation: move 20s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-100px) translateX(100px);
+            }
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        .circle.small {
+            width: 100px;
+            height: 100px;
+            top: 30px;
+            left: 30px;
+        }
+
+        .circle.large {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://res.cloudinary.com/dltwagldg/image/upload/v1725527832/%D7%A8%D7%9E%D7%95%D7%AA_%D7%A4%D7%9C%D7%93_k3jlb7.png" alt="לוגו רמות פלד">
+    <h1>רמות פלד - סוכנות ביטוח</h1>
+</header>
+
+<section>
+    <h2>מטריה ביטוחית מקיפה עבורך</h2>
+    <p>בסוכנות רמות פלד, אנו מספקים פתרונות ביטוחיים מתקדמים בפנסיה, פיננסים, בריאות וחיים.</p>
+    <p>אנו כאן להגן עליך ועל עתידך.</p>
+</section>
+
+<section>
+    <h3>צור קשר עוד היום!</h3>
+    <p>ליצירת קשר בווטסאפ לחצו על הכפתור:</p>
+    <a class="btn" href="https://wa.me/972508803099" target="_blank">שלח הודעה בוואטסאפ</a>
+    <p>או שלחו לנו מייל:</p>
+    <a class="btn" href="mailto:ramaninio1@gmail.com">שלח מייל</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 רמות פלד - כל הזכויות שמורות</p>
+</footer>
+
+<!-- עיגולים דקורטיביים להוספת מימד עיצובי נוסף -->
+<div class="circle small"></div>
+<div class="circle large"></div>
+
+</body>
+</html>
